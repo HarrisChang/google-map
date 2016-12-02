@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="googleMap.css">
+    <title>Google map</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h3 class="title">模拟旅游网站景点部分</h3>
+            <p class="description">
+                获取指定地点附近的全部景点数并在地图上mark，当点击mark时弹出信息框，且右侧列表中对应项目高亮
+            </p>
+        </div>
+        <div class="main fl">
+            <div id="google_map" ></div>
+        </div>
+        <div class="sidebar fr">
+            <p>酒店列表</p>
+            <div class="diy_select ">
+                <div class="select-text">
+                    <input type="hidden" class="diy_select_input" name="" value="所有" />
+                    <div class="diy_select_txt"></div>
+                    <div class="diy_select_btn"></div>
+                </div>
+                <div class="select-option">
+                    <ul class="diy_select_list">
+                        <!--Ajax请求数据，动态生成选项-->
+                        <!--<li value="1">所有</li>
+                        <li value="2">港岛</li>
+                        <li value="3">九龙</li>
+                        <li value="4">新界</li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="lists">
+                <!--Ajax请求数据，动态生成城市列表-->
+                <ul class="cities"></ul>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBRaTl-83i_JRIn_f_1F-pcPYACuntAu2A&sensor=false"></script>
+    <script src="js/jquery1.9.1.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/markerwithlabel.js"></script>
+    <script src="js/infobox.js"></script>
+    <script src="js/map01.js"></script>
+</body>
+</html>
